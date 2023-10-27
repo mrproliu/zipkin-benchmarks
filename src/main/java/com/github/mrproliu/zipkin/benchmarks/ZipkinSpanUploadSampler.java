@@ -6,7 +6,9 @@ import org.apache.jmeter.samplers.SampleResult;
 import org.apache.jmeter.config.Arguments;
 import zipkin2.codec.SpanBytesEncoder;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -31,6 +33,7 @@ public class ZipkinSpanUploadSampler extends AbstractJavaSamplerClient {
 
         boolean success = true;
         int responseCode = 0;
+        String responseBody = null;
         try {
             String host = context.getParameter("REMOTE_HOST");
             int port = context.getIntParameter("REMOTE_PORT");
@@ -42,9 +45,19 @@ public class ZipkinSpanUploadSampler extends AbstractJavaSamplerClient {
             connection.setDoOutput(true);
             try (OutputStream os = connection.getOutputStream()) {
                 os.write(spansBuffer, 0, spansBuffer.length);
+                os.flush();
             }
 
+            // reading response
             responseCode = connection.getResponseCode();
+            BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+            String inputLine;
+            StringBuffer response = new StringBuffer();
+            while ((inputLine = in.readLine()) != null) {
+                response.append(inputLine);
+            }
+            responseBody = response.toString();
+            in.close();
         } catch (IOException e) {
             e.printStackTrace();
             success = false;
@@ -54,7 +67,7 @@ public class ZipkinSpanUploadSampler extends AbstractJavaSamplerClient {
         result.sampleEnd();
         result.setSuccessful(success);  // Assume the request was successful
         result.setResponseCode(String.valueOf(responseCode));
-        result.setResponseMessage("OK");
+        result.setResponseMessage(responseBody);
         return result;
     }
 
