@@ -16,7 +16,7 @@
         <intProp name="calcMode">1</intProp>
         <doubleProp>
           <name>throughput</name>
-          <value>30000.0</value>
+          <value>18000.0</value>
           <savedValue>0.0</savedValue>
         </doubleProp>
       </ConstantThroughputTimer>
@@ -27,7 +27,7 @@
           <intProp name="LoopController.loops">-1</intProp>
           <boolProp name="LoopController.continue_forever">false</boolProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">50</stringProp>
+        <stringProp name="ThreadGroup.num_threads">30</stringProp>
         <stringProp name="ThreadGroup.ramp_time">1</stringProp>
         <boolProp name="ThreadGroup.delayedStart">false</boolProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
@@ -54,7 +54,7 @@
           <stringProp name="classname">com.github.mrproliu.zipkin.benchmarks.ZipkinSpanUploadSampler</stringProp>
         </JavaSampler>
         <hashTree/>
-        <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="聚合报告" enabled="true">
+        <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
             <name>saveConfig</name>
