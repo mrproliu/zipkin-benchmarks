@@ -47,7 +47,7 @@
             <collectionProp name="Arguments.arguments">
               <elementProp name="REMOTE_HOST" elementType="Argument">
                 <stringProp name="Argument.name">REMOTE_HOST</stringProp>
-                <stringProp name="Argument.value">0.0.0.0</stringProp>
+                <stringProp name="Argument.value">10.170.0.97</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
               <elementProp name="REMOTE_PORT" elementType="Argument">
