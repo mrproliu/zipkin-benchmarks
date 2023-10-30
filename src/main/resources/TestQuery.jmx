@@ -21,6 +21,15 @@
       </elementProp>
     </TestPlan>
     <hashTree>
+      <ConstantThroughputTimer guiclass="TestBeanGUI" testclass="ConstantThroughputTimer" testname="Constant Throughput Timer" enabled="true">
+        <intProp name="calcMode">1</intProp>
+        <doubleProp>
+          <name>throughput</name>
+          <value>300.0</value>
+          <savedValue>0.0</savedValue>
+        </doubleProp>
+      </ConstantThroughputTimer>
+      <hashTree/>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
@@ -166,15 +175,6 @@
         </HTTPSamplerProxy>
         <hashTree/>
       </hashTree>
-      <ConstantThroughputTimer guiclass="TestBeanGUI" testclass="ConstantThroughputTimer" testname="Constant Throughput Timer" enabled="true">
-        <intProp name="calcMode">0</intProp>
-        <doubleProp>
-          <name>throughput</name>
-          <value>300.0</value>
-          <savedValue>0.0</savedValue>
-        </doubleProp>
-      </ConstantThroughputTimer>
-      <hashTree/>
     </hashTree>
   </hashTree>
 </jmeterTestPlan>
