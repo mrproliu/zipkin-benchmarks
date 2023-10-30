@@ -25,7 +25,7 @@
         <intProp name="calcMode">1</intProp>
         <doubleProp>
           <name>throughput</name>
-          <value>3000.0</value>
+          <value>1800.0</value>
           <savedValue>0.0</savedValue>
         </doubleProp>
       </ConstantThroughputTimer>
@@ -147,7 +147,7 @@
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 <stringProp name="Argument.name">limit</stringProp>
-                <stringProp name="Argument.value">100</stringProp>
+                <stringProp name="Argument.value">20</stringProp>
               </elementProp>
               <elementProp name="annotationQuery" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
