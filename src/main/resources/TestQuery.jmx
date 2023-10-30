@@ -147,7 +147,7 @@
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 <stringProp name="Argument.name">limit</stringProp>
-                <stringProp name="Argument.value">20</stringProp>
+                <stringProp name="Argument.value">10</stringProp>
               </elementProp>
               <elementProp name="annotationQuery" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
