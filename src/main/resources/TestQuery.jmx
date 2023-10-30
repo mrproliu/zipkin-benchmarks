@@ -22,16 +22,16 @@
     </TestPlan>
     <hashTree>
       <ConstantThroughputTimer guiclass="TestBeanGUI" testclass="ConstantThroughputTimer" testname="Constant Throughput Timer" enabled="true">
-        <intProp name="calcMode">1</intProp>
+        <intProp name="calcMode">0</intProp>
         <doubleProp>
           <name>throughput</name>
-          <value>5000.0</value>
+          <value>1200.0</value>
           <savedValue>0.0</savedValue>
         </doubleProp>
       </ConstantThroughputTimer>
       <hashTree/>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
-        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="ThreadGroup.on_sample_error">startnextloop</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <intProp name="LoopController.loops">-1</intProp>
           <boolProp name="LoopController.continue_forever">false</boolProp>
