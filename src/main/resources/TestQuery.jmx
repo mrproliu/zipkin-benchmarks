@@ -135,13 +135,6 @@
                 <stringProp name="Argument.name">serviceName</stringProp>
                 <stringProp name="Argument.value">frontend</stringProp>
               </elementProp>
-              <elementProp name="minDuration" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-                <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                <stringProp name="Argument.name">minDuration</stringProp>
-                <stringProp name="Argument.value">10</stringProp>
-              </elementProp>
               <elementProp name="limit" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">true</boolProp>
                 <stringProp name="Argument.metadata">=</stringProp>
