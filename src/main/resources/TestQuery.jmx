@@ -133,7 +133,7 @@
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 <stringProp name="Argument.name">serviceName</stringProp>
-                <stringProp name="Argument.value">frontend</stringProp>
+                <stringProp name="Argument.value">backend</stringProp>
               </elementProp>
               <elementProp name="limit" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">true</boolProp>
